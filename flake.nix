@@ -6,12 +6,14 @@
     cargo-build-bpf.url = "path:./cargo-build-bpf";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
-  outputs = inputs: with import inputs.nixpkgs { 
+  outputs = inputs: with import inputs.nixpkgs
+    {
       system = "x86_64-linux";
-  }; rec {
-    packages.x86_64-linux.default = with import inputs.nixpkgs { 
-      system = "x86_64-linux";
-    }; stdenv.mkDerivation rec {
+    }; rec {
+    packages.x86_64-linux.default = with import inputs.nixpkgs
+      {
+        system = "x86_64-linux";
+      }; stdenv.mkDerivation rec {
       name = "solana-${version}";
       version = "1.23.1";
 
@@ -36,7 +38,7 @@
       };
     };
 
-    devShells.x86_64-linux.default =  mkShellNoCC {
+    devShells.x86_64-linux.default = mkShellNoCC {
       packages = with packages.x86_64-linux; [
         default
       ];

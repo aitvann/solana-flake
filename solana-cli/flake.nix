@@ -3,9 +3,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
   outputs = inputs: {
-    packages.x86_64-linux.default = with import inputs.nixpkgs { 
-      system = "x86_64-linux";
-    }; stdenv.mkDerivation rec {
+    packages.x86_64-linux.default = with import inputs.nixpkgs
+      {
+        system = "x86_64-linux";
+      }; stdenv.mkDerivation rec {
       name = "solana-cli";
       version = "1.10.29";
       filename = "solana-release-x86_64-unknown-linux-gnu.tar.bz2";

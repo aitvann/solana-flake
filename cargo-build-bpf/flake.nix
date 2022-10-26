@@ -3,9 +3,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
   outputs = inputs: {
-    packages.x86_64-linux.default = with import inputs.nixpkgs { 
-      system = "x86_64-linux";
-    }; rustPlatform.buildRustPackage rec {
+    packages.x86_64-linux.default = with import inputs.nixpkgs
+      {
+        system = "x86_64-linux";
+      }; rustPlatform.buildRustPackage rec {
       pname = "solana-cargo-build-bpf";
       version = "1.10.29";
 
@@ -34,14 +35,14 @@
       ];
 
       LIBCLANG_PATH = "${libclang.lib}/lib";
-      NIX_CFLAGS_COMPILE  = "-I${libclang.lib}/clang/11.1.0/include";
+      NIX_CFLAGS_COMPILE = "-I${libclang.lib}/clang/11.1.0/include";
 
       doCheck = false;
 
-      cargoPatches = [ 
-        ./patches/main.rs.diff 
-        ./patches/Cargo.toml.diff 
-        ./patches/Cargo.lock.diff 
+      cargoPatches = [
+        ./patches/main.rs.diff
+        ./patches/Cargo.toml.diff
+        ./patches/Cargo.lock.diff
       ];
 
       meta = with lib; {
