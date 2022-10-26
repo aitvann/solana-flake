@@ -12,7 +12,7 @@
       filename = "solana-release-x86_64-unknown-linux-gnu.tar.bz2";
       src = fetchzip {
         url = "https://github.com/solana-labs/solana/releases/download/v${version}/${filename}";
-        sha256 = "sha256-e/ubeRclr1B5B9CMGMhbue8XuxSK8bQbhXxXI1+IHF4=";
+        sha256 = "sha256-2UazPidzFYblUpR4ErmcQIFD8AtyL1ib9MQar2qLltQ=";
       };
       nativeBuildInputs = [ autoPatchelfHook pkgs.makeWrapper ];
       buildInputs = with pkgs; [

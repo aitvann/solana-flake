@@ -6,7 +6,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-x/00nte4n5qANdVEvFuR6woaeTfr63IBMo91ODPwTvg=",
+        "narHash": "sha256-iy2Ry5MnkfR+Q6RTCDN0IF+JnyMmFUpGW4Xd5BANxcM=",
         "path": "./cargo-build-bpf",
         "type": "path"
       },
@@ -33,11 +33,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1657114324,
-        "narHash": "sha256-fWuaUNXrHcz/ciHRHlcSO92dvV3EVS0GJQUSBO5JIB4=",
+        "lastModified": 1666703756,
+        "narHash": "sha256-GwpMJ1hT+z1fMAUkaGtvbvofJQwdVFDEGVhfE82+AUk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a5c867d9fe9e4380452628e8f171c26b69fa9d3d",
+        "rev": "f994293d1eb8812f032e8919e10a594567cf6ef7",
         "type": "github"
       },
       "original": {
@@ -93,7 +93,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-I0Oe7zaYm6HKphzk9LYXF7yTqlbB84H+ho56R5hK8BQ=",
+        "narHash": "sha256-fJiVvu0+fW6pGyVICYCw8nhyjfcFkMMA+xQz5w2YRok=",
         "path": "./solana-bpf-tools",
         "type": "path"
       },
@@ -108,7 +108,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-aNu9tapxV6F7n2NvNcTr+HAfOygbdeKj99Qy8Zjch+A=",
+        "narHash": "sha256-acPeCRJa86tHNYxEdR1xNSgQsVZzj7kXtiYAWxDMqd4=",
         "path": "./solana-cli",
         "type": "path"
       },
